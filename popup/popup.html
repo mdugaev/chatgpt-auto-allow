@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChatGPT Auto Allow</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>ChatGPT Auto Allow</h1>
+      <label class="setting" for="enabled">
+        <span class="setting-text">Автоматически нажимать<br /><strong>Always allow</strong></span>
+        <input id="enabled" type="checkbox" role="switch" disabled />
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+      <p id="status" role="status" aria-live="polite">Подключение к вкладке…</p>
+      <p class="scope">Действует только в этой вкладке ChatGPT.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

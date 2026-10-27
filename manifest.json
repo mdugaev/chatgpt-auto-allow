@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Auto Allow",
+  "version": "1.0.0",
+  "description": "Automatically clicks Always allow on ChatGPT tool permission cards in explicitly enabled tabs.",
+  "minimum_chrome_version": "102",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "src/service-worker.js"
+  },
+  "action": {
+    "default_title": "ChatGPT Auto Allow",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["src/recognition.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

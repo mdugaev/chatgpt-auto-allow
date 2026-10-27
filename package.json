@@ -1,0 +1,10 @@
+{
+  "name": "chatgpt-auto-allow",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Standalone Chrome MV3 extension for per-tab ChatGPT Always allow automation",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/recognition.js && node --check src/content.js && node --check src/service-worker.js && node --check popup/popup.js && npm test"
+  }
+}
