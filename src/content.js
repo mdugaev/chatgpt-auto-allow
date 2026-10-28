@@ -115,7 +115,7 @@
     stopWatching();
     lastStatus = "waiting";
     if (!document.documentElement) return;
-    observer = new MutationObserver(() => scheduleScan());
+    observer = new MutationObserver(() => scheduleScan(800));
     observer.observe(document.documentElement, {
       childList: true,
       subtree: true,
